@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+	<head>
+		<meta charset="utf-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+			<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+			<title>Black ⬛️ A black screen</title>
+			<meta name="description" content="Fullscreen black screen ⬛️ A black screen ⬛️ Fill your screen with blackness">
+			<link rel="canonical" href="https://omrilotan.com/black/">
+			<link rel="alternate" href="https://omrilotan.com/black/" hreflang="en-GB">
+			<link rel="manifest" href="manifest.json">
+			<meta name="theme-color" content="#000000">
+			<meta name="apple-mobile-web-app-capable" content="yes">
+			<meta name="apple-mobile-web-app-status-bar-style" content="#000000">
+			<meta name="apple-mobile-web-app-title" content="Black">
+			<link rel="apple-touch-startup-image" href="splash.png">
+			<link rel="apple-touch-icon" sizes="180x180" href="black.png">
+			<meta name="msapplication-TileColor" content="#000000">
+			<style>
+*{margin:0;padding:0;outline:0}
+html,body{height:100%}
+button{background:black;width:100%;height:100%;border:0;}
+			</style>
+	</head>
+	<body>
+		<button id="fs">&nbsp;</button>
+		<script>
+let isfs = false;
+document.addEventListener('fullscreenchange', () => { isfs = !isfs; }, false);
+fs.addEventListener('click', () => isfs ? document.exitFullscreen() : document.body.requestFullscreen(), false);
+document.addEventListener('DOMContentLoaded', fs.focus.bind(fs), false);
+		</script>
+	</body>
+</html>
