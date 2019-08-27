@@ -8,7 +8,7 @@
 			<meta name="description" content="Fullscreen black screen ⬛️ A black screen ⬛️ Fill your screen with blackness">
 			<link rel="canonical" href="https://omrilotan.com/black/">
 			<link rel="alternate" href="https://omrilotan.com/black/" hreflang="en-GB">
-			<link rel="manifest" href="manifest.json">
+			<link rel="manifest" href="manifest.webmanifest">
 			<meta name="theme-color" content="#000000">
 			<meta name="apple-mobile-web-app-capable" content="yes">
 			<meta name="apple-mobile-web-app-status-bar-style" content="#000000">
@@ -29,6 +29,7 @@ let isfs = false;
 document.addEventListener('fullscreenchange', () => { isfs = !isfs; }, false);
 fs.addEventListener('click', () => isfs ? document.exitFullscreen() : document.body.requestFullscreen(), false);
 document.addEventListener('DOMContentLoaded', fs.focus.bind(fs), false);
+navigator.onLine && location.protocol.startsWith('https') && 'serviceWorker' in navigator && navigator.serviceWorker.register('sw.js?ck=v1')
 		</script>
 	</body>
 </html>
